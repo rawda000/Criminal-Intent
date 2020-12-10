@@ -1,4 +1,4 @@
-package com.example.the_big_nerd;
+package com.example.criminal_intent;
 
 import android.content.Context;
 
