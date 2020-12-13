@@ -9,6 +9,7 @@ import com.example.criminal_intent.CriminalIntent.database.CrimeBaseHelper;
 import com.example.criminal_intent.CriminalIntent.database.CrimeCursorWrapper;
 import com.example.criminal_intent.CriminalIntent.database.CrimeDbSchema.CrimeTable;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -88,5 +89,10 @@ public class CrimeLabSingleton {
         } finally {
             cursorWrapper.close();
         }
+    }
+    public File getPhotoFile(Crime crime) {
+        File filesDir = mContext.getFilesDir();
+        return new File(filesDir,
+                crime.getPhotoFilename());
     }
 }
